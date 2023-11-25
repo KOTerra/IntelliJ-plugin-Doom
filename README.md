@@ -19,3 +19,4 @@ This plugin uses [js-dos](https://github.com/caiiiycuk/js-dos) and games are hos
 
 <div/>
 <iframe width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/23206"></iframe>  
+<a target='_blank'><img width='384px' height='319px' style='border:0px;height:319px;' src='https://plugins.jetbrains.com/embeddable/card/23206' border='0'/></a>
