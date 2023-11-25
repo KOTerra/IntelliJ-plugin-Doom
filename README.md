@@ -1,7 +1,7 @@
-IntelliJ DOOM
+IntelliJ plugin DOOM
 ---
 <!-- Plugin description -->
-An [IntelliJ Idea](https://www.jetbrains.com/idea/) addon that allows users to play DOOM and other retro DoS games inside an IntelliJ tool-window.
+An [IntelliJ Idea](https://www.jetbrains.com/idea/) plugin that allows users to play DOOM and other retro DoS games inside an IntelliJ tool-window.
 This plugin uses [js-dos](https://github.com/caiiiycuk/js-dos) and games are hosted on [DoS Zone](https://dos.zone/). Also [check out](https://github.com/KOTerra/oxygen-addon-doom) this plugin's implementation for [Oxygen XML editor](https://www.oxygenxml.com/).
 
 ![DOOM](doc/doomss.png)
