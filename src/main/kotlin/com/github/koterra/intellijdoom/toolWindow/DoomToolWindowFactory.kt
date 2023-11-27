@@ -7,10 +7,19 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.ComboBox
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
+import com.intellij.openapi.wm.ToolWindowManager
+import com.intellij.openapi.wm.WindowManager
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
+import com.intellij.ui.content.ContentManagerAdapter
+import com.intellij.ui.content.ContentManagerEvent
+import com.intellij.ui.content.ContentManagerListener
 import com.intellij.ui.jcef.JBCefBrowser
+import org.cef.browser.CefBrowser
+import org.cef.handler.CefFocusHandler
+import org.cef.handler.CefFocusHandlerAdapter
 import java.awt.BorderLayout
+import java.awt.event.FocusListener
 
 
 class DoomToolWindowFactory : ToolWindowFactory {
@@ -19,16 +28,17 @@ class DoomToolWindowFactory : ToolWindowFactory {
     }
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        val myToolWindow = MyToolWindow(toolWindow)
-        val content = ContentFactory.getInstance().createContent(myToolWindow.getContent(), null, false)
+        val doomToolWindow = DoomToolWindow(toolWindow)
+        val content = ContentFactory.getInstance().createContent(doomToolWindow.getContent(), null, false)
         toolWindow.contentManager.addContent(content)
     }
 
     override fun shouldBeAvailable(project: Project) = true
 
-    class MyToolWindow(toolWindow: ToolWindow) {
+    class DoomToolWindow(toolWindow: ToolWindow) {
 
         private val service = toolWindow.project.service<MyProjectService>()
+        private val toolWindow: ToolWindow = toolWindow;
 
         fun getContent() = JBPanel<JBPanel<*>>().apply {
 
@@ -67,5 +77,6 @@ class DoomToolWindowFactory : ToolWindowFactory {
 
             return panel
         }
+
     }
 }
