@@ -10,6 +10,8 @@ This plugin uses [js-dos](https://github.com/caiiiycuk/js-dos) and games are hos
 
 ## Supported Games
 - DOOM
+
+# Need fixing:
 - Mortal Kombat
 - Grand Theft Auto
 - Prince of Persia
