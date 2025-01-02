@@ -6,7 +6,7 @@ IntelliJ plugin DOOM
 This [IntelliJ IDEA](https://www.jetbrains.com/idea/) plugin allows users to play DOOM and other retro DoS games inside an IntelliJ tool-window.
 This plugin uses [js-dos](https://github.com/caiiiycuk/js-dos) and games are hosted on [DoS Zone](https://dos.zone/).
 
-
+[Test](/src/main/resources/gameHtmls/test.html)
 
 ## Supported Games
 - DOOM
