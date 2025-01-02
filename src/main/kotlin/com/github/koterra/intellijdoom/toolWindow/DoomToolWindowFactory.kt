@@ -41,13 +41,10 @@ class DoomToolWindowFactory : ToolWindowFactory {
             // Create a JBCefBrowser
             val cefBrowser = JBCefBrowser()
 
-            // Load a URL
             cefBrowser.loadURL(UrlsBundle.getUrl(selection))
 
-            // Add the browser component to the panel
             panel.add(cefBrowser.component, BorderLayout.CENTER)
 
-            // Add a button to demonstrate interaction
             val combo = ComboBox<String>();
             combo.isEditable = false;
             combo.addItem(UrlsBundle.get("LANDING_PAGE"));
@@ -60,7 +57,6 @@ class DoomToolWindowFactory : ToolWindowFactory {
 
 
             combo.addActionListener {
-                // Handle the event when an item is selected
                 selection = combo.selectedItem as String;
                 cefBrowser.loadURL(UrlsBundle.getUrl(selection))
             }
